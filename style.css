@@ -1,0 +1,250 @@
+
+:root {
+  --arriere-plan: #230F44;
+  --arriere-plan-alt: #230f4495;
+  --text: #EDECF6;
+  --text-alt: #edecf6ab;
+  --activation: #7EC9E8;
+  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="solar-system"] {
+  --arriere-plan: #DBDBF2;
+  --arriere-plan-alt: #dbdbf2ad;
+  --text: #230F44;
+  --text-alt: #230f4492;
+  --activation: #75bfe2;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background-color: var(--arriere-plan);
+
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+h1 {
+  font-size: 100px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: var(--text);
+  background-size: 100%;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+#home {
+  background: url(stars.jpg); 
+}
+
+.home {
+  color: #EDECF6;
+}
+
+/* Navigation */
+nav {
+  /* Rester toujours au top of page avec z index et position fixed*/
+  z-index: 10;
+  position: fixed;
+  font-size: 16px;
+  letter-spacing: 2px;
+  padding: 16px;
+  width: 100vw;
+  background-color: var(--text-alt);
+}
+
+a {
+  margin-right: 25px;
+  color: var(--arriere-plan);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  color: var(--activation);
+}
+
+/*------------------------------------ Home Section ------------------------------------*/
+.title-group {
+  text-align: center;
+}
+
+/* ------------------------------------About Section------------------------------------ */
+.about-container {
+  display: flex;
+}
+
+.image-container {
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 25px;
+  width: auto;
+  background: var(--arriere-plan);
+  box-shadow: var(--box-shadow);
+}
+
+img {
+  height: 300px;
+  width: 300px;
+}
+
+/*------------------------------------ Projects Section ------------------------------------*/
+.buttons {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+button {
+  min-width: 180px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: var(--text-alt);
+  color: var(--arriere-plan);
+  box-shadow: var(--box-shadow);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+button:hover {
+  filter: brightness(110%);
+  background: var(--activation);
+  color: var(--on-primary);
+}
+
+button:active{
+  transform: scale(0.95); 
+  /* donne l'impression qu'on appuie dessus */
+}
+
+.text-box {
+  width: 40%;
+  text-align: justify;
+  background: var(--text);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+p {
+  margin: 0;
+  line-height: 25px;
+  color: var(--arriere-plan);
+}
+
+/*------------------------------------ Contact Section------------------------------------ */
+.fa-brands {
+  font-size: 80px;
+  margin-right: 50px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.fa-brands:hover {
+  color: var(--activation);
+}
+
+/* ----------------------------------Dark Mode Toggle ------------------------------------*/
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  right: 25px;
+  top: 10px;
+}
+
+.theme-switch-wrapper span {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.toggle-text {
+  position: relative;
+  top: -4px;
+  right: 5px;
+  font-weight: bold;
+  color: var(--arriere-plan);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background: var(--arriere-plan);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  background: var(--activation);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background: var(--text);
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.fa-solid {
+  font-size: 30px;
+  margin-right: 5px;
+  color: var(--arriere-plan);
+}

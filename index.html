@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light and Dark modes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="mc.png">
+
+    
+</head>
+    <body>
+        <!-- Dark mode -->
+        <div class="theme-switch-wrapper">
+            <span id="toggle-icon">
+                <span class="toggle-text">Infinite Space</span>
+                <i class="fa-solid fa-moon"></i>
+            </span>
+            <label class="theme-switch">
+                <input type="checkbox">
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <!-- Navigation -->
+        <nav id="nav">
+            <a href="#home">ACCUEIL</a>
+            <a href="#about">INFORMATIONS</a>
+            <a href="#projects">RESSOURCES</a>
+            <a href="#contact">ME CONTACTER</a>
+        </nav>
+        <section id="home">
+            <div class="title-group">
+                <h1 class="home">Poussières d'étoiles</h1>
+                <h2 class="home">Les Mystères de l'Espace</h2>
+            </div>
+        </section>
+        <!-- Section infos du site -->
+        <section id="about">
+            <h1>Informations</h1>
+            <div class="about-container">
+                <div class="image-container">
+                    <h2>Constellations</h2>
+                    <img src="img/actualites_space.svg" id="image1">
+                </div>
+                <div class="image-container">
+                    <h2>Actualité</h2>
+                    <img src="img/constellations_space.svg" id="image2">
+                </div>
+                <div class="image-container">
+                    <h2>Système Solaire</h2>
+                    <img src="img/systeme_solaire_space.svg" id="image3">
+                </div>
+            </div>
+        </section>
+        <!-- Section ressources -->
+        <section id="projects">
+            <h1>Ressources</h1>
+            <div class="buttons">
+                <button>Bouton</button>
+            </div>
+            <div class="text-box" id="text-box">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam earum nesciunt error saepe sapiente mollitia, ratione expedita voluptatum, officiis iste velit atque provident facere cupiditate laborum, quisquam quibusdam. Officiis, ea.</p>
+            </div>
+        </section>
+        <!-- Section contacts -->
+        <section id="contact">
+            <h1>Me contacter</h1>
+            <div class="social-icons">
+                <i class="fa-brands fa-internet-explorer"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-envelope"></i>
+                <i class="fa-brands fa-google"></i>
+            </div>
+        </section>
+
+        <!--  Script -->
+        <!-- <i class="fa-solid fa-house"></i> -->
+        <script src="script.js"></script>
+    </body>
+</html>
